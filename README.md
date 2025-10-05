@@ -52,7 +52,8 @@ Your task is to containerize this existing application using Docker. You need to
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
-
+Docker containers are lightweight and share the same operating system, which makes them start up fast and use fewer resources. Virtual machines each have their own full operating system, which makes them slower and larger.  
+Developers use Docker because it’s easier to build, test, and run apps that work exactly the same on any computer or server. It also helps teams deploy updates quickly and avoid the “it works on my machine” problem.
 
 
 ## Application Requirements for Docker
@@ -92,3 +93,9 @@ docker-assignment/
 ```
 
 Good luck with your Docker containerization!
+## Starting the Application
+
+**Build:**
+```bash
+docker build -t shane-node-app:1.0 .
+docker run -d --name shane-node-app -p 3000:3000 shane-node-app:1.0
